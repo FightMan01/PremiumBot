@@ -156,7 +156,7 @@ async def play(ctx, * ,url, ytdl_options=None, **kwarg):
                 server = ctx.message.server
                 voice_client = client.voice_client_in(server)
                 await voice_client.disconnect()
-                await client.say("The song is over. I left the voice chanbnel. :white_check_mark: ")
+                await client.say("The song is over. I left the voice channel. :white_check_mark: ")
             except:
                 return False
         else:
