@@ -146,13 +146,7 @@ async def play(ctx, * ,url, ytdl_options=None, **kwarg):
                 playing = "Now playing: **{}**".format(player.title)
                 global last_played
                 last_played = player.url
-                embed = discord.Embed(title="Music Player", description="Informations: ", color=0x00ff00)
-                embed.add_field(name="Song title",value=player.title, inline=True)
-                embed.add_field(name="Upload date",value=player.upload_date, inline=True)
-                embed.add_field(name="Uploader",value=player.uploader, inline=True)
-                embed.add_field(name="Requested",value=ctx.message.author,inline=True)
-                embed.set_author(name=ctx.message.author.name, icon_url=ctx.message.author.icon_url)
-                await client.say(embed=embed)
+                await client.say("The music started! :thumbsup:")
             except:
                 print(Exception)
                 await client.say("Oops! Something went wrong. Please try p!leave and try again. :x:")
